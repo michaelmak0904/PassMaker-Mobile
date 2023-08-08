@@ -27,9 +27,11 @@ const SuccessScreen = ({ route, navigation }) => {
             ],
             "thumbnail": "https://static.wixstatic.com/media/27cb76_99ef2bcb9c7b438f85ee24e8c5676853~mv2.png/v1/crop/x_0,y_2,w_1500,h_1495/fill/w_316,h_315,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ACR350v2.png"
         }).then(async (passResponse) => {
-            Alert.alert("Success", passResponse)
+            console.log("Success", passResponse)
+            //Alert.alert("Success", passResponse)
         }).catch((error) => {
-            Alert.alert("Error", error)
+            console.log("Error", error)
+            //Alert.alert("Error", error)
         })
     }
 
@@ -48,7 +50,13 @@ const SuccessScreen = ({ route, navigation }) => {
             </View>
             <Text>TOTAL AMOUNT PAID : $499</Text>
             <Text>TRANSACTION DATE : 12 Aug 2023</Text>
-            <TouchableOpacity onPress={createPassRequest}>Create Pass</TouchableOpacity>
+
+            <TouchableOpacity className=" bg-blue-500 p-4 items-center"
+                onPress={() => createPassRequest()}
+            >
+                <Text className="text-xl font-semibold text-white uppercase">Add Pass</Text>
+            </TouchableOpacity>
+
             {/* <AddPassButton
                 style={{height : 40}}
                 addPassButtonStyle={PassKit.AddPassButtonStyle.black}
