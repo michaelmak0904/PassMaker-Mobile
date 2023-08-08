@@ -3,7 +3,8 @@ import { View, Text, Alert, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
 import React from 'react'
 import axios from 'axios';
-// import PassKit, { AddPassButton } from 'react-native-wallet-pass'
+import PassKit, { AddPassButton } from 'react-native-wallet-pass'
+import { Buffer } from "buffer";
 
 const SuccessScreen = ({ route, navigation }) => {
 
@@ -28,6 +29,17 @@ const SuccessScreen = ({ route, navigation }) => {
             "thumbnail": "https://static.wixstatic.com/media/27cb76_99ef2bcb9c7b438f85ee24e8c5676853~mv2.png/v1/crop/x_0,y_2,w_1500,h_1495/fill/w_316,h_315,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ACR350v2.png"
         }).then(async (passResponse) => {
             console.log("Success", passResponse)
+            PassKit.canAddPasses()
+                .then(async (result) => {
+                    if (result) {
+                        await axios.get("http://localhost:3000/download", { responseType: "arraybuffer" })
+                            .then((donwloadPassResponse) => {
+                                let passData = Buffer.from(donwloadPassResponse.data, 'binary').toString('base64')
+                                PassKit.addPass(passData)
+                            })
+
+                    }
+                })
             //Alert.alert("Success", passResponse)
         }).catch((error) => {
             console.log("Error", error)
@@ -51,17 +63,11 @@ const SuccessScreen = ({ route, navigation }) => {
             <Text>TOTAL AMOUNT PAID : $499</Text>
             <Text>TRANSACTION DATE : 12 Aug 2023</Text>
 
-            <TouchableOpacity className=" bg-blue-500 p-4 items-center"
-                onPress={() => createPassRequest()}
-            >
-                <Text className="text-xl font-semibold text-white uppercase">Add Pass</Text>
-            </TouchableOpacity>
-
-            {/* <AddPassButton
-                style={{height : 40}}
+            <AddPassButton
+                style={{ height: 60 }}
                 addPassButtonStyle={PassKit.AddPassButtonStyle.black}
-                onPress={() => { console.log('onPress') }}
-            /> */}
+                onPress={() => { createPassRequest() }}
+            />
         </View>
     )
 }

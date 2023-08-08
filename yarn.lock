@@ -6011,6 +6011,11 @@ react-native-vector-icons@*, react-native-vector-icons@^10.0.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
+react-native-wallet-pass@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/react-native-wallet-pass/-/react-native-wallet-pass-1.0.5.tgz"
+  integrity sha512-lXrunI3VJ1s18XzWLWyFyDZ0CL3I1fx9klJuridLq4X33tk8HJ900WN2BbcnqpgGajY2OQGh3LavR+4FYBGQ1A==
+
 react-native@*, react-native@0.72.3:
   version "0.72.3"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.72.3.tgz"
