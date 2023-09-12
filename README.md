@@ -1,3 +1,11 @@
+
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-08-15 at 10 51 12](https://github.com/michaelmak0904/PassMaker-Mobile/assets/45162785/df2f3207-1838-4a0a-9022-410dc349b139)
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-08-15 at 10 50 50](https://github.com/michaelmak0904/PassMaker-Mobile/assets/45162785/bba7e051-678b-41b6-a5ce-0eac0aea5b9e)
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-08-15 at 10 50 41](https://github.com/michaelmak0904/PassMaker-Mobile/assets/45162785/b690141b-929d-4b34-9d55-d8111a2acf9a)
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-08-15 at 10 50 38](https://github.com/michaelmak0904/PassMaker-Mobile/assets/45162785/241ce596-db39-47d0-af7d-4205b0fb9cb1)
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-08-15 at 10 50 35](https://github.com/michaelmak0904/PassMaker-Mobile/assets/45162785/962d4213-0d07-49fc-be56-10e49a2b5b49)
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
